@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { SCI, CHE, BIO, PHY } from "./utils/teachers";
+import Timetable from "./components/Timetable";
 
-function App() {
+
+
+const App = () => {
+
+  const [date, setDate] = useState( new Date() )
+
+  useEffect( () => {
+    setDate( new Date() )
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <div>
+    <Timetable teachers={PHY} date={date} />
+   </div>
+)
+
 }
+
+
 
 export default App;

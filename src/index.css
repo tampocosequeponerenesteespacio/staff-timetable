@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+td {
+  overflow: hidden;
+  white-space: pre;
+  text-align: center;
+  padding: 1vw;
+  font-size: 1.1rem;
+  font-weight: 400;
+  background-color: gray;
+  border: none;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.65);
+  
+}
+
+.active {
+  background-color: darkcyan;
+  font-weight: 600;
+}
+
+#light {
+  background-color: lightblue;
+}
+
+#dark {
+  background-color: darkblue;
+}
