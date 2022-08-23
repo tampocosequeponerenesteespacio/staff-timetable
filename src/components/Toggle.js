@@ -6,7 +6,7 @@ const Span = styled.span`
 
 & input {
     position: absolute;
-    left: -200vw;
+    left: -1000vw;
 }
 
 & label {
