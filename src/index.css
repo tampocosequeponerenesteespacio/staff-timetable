@@ -5,11 +5,75 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --bg: rgb(230, 230, 255);  /* Background */
+  --bgh: rgba(0,0,0,0.1);  /* bg Header */
+  --bgtd: rgba(0,0,0,0.15);  /* bg <td> */
+  --bgtda: rgba(0,0,0,0.3);  /* bg  highlighted <td> */
+  --text: rgba(0,0,0,0.9);  /* font color */
+}
+
+.dark {
+  --bg: rgb(0, 0, 20);
+  --bgh: rgba(255,255,255,0.1);
+  --bgtd: rgba(255,255,255,0.12);
+  --bgtda: rgba(255,255,255,0.22);
+  --text: rgba(255,255,255,0.6);
+}
+
+
+span label {
+  font-size: 1.2em;
+  margin-left: 0.5em;
+}
+
+
+
+#daySelect {
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 2px; 
+  margin: 5px;
+  font-size: 1em;
+}
+
+#day {
+  margin-top: .4em;
+}
+
+#dayButton {
+  padding: 2px 8px;
+  margin: 5px;
+  font-size: 1em;
+  font-weight: 600;
+  border: 2px solid var(--text);
+  color: var(--text);
+  border-radius: 0.2em;
+  background: none;
+  cursor: pointer;
+}
+
+#dayButton:disabled {
+  cursor: default;
+  opacity: 0.15;
+}
+
+
+#main {    
+  overflow-x: auto;  
+  height: 100vh;
+  padding: 0px 15px;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+table {    
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;  
 }
 
 td {
@@ -19,22 +83,128 @@ td {
   padding: 1vw;
   font-size: 1.1rem;
   font-weight: 400;
-  background-color: gray;
+  background-color: var(--bgtd);
   border: none;
   border-radius: 3px;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--text)
   
 }
 
 .active {
-  background-color: darkcyan;
+  background-color: var(--bgtda);
+  color: var(--text);
   font-weight: 600;
 }
 
-#light {
-  background-color: lightblue;
+
+#header {
+display: flex;
+position: relative;
+justify-content: center;
+align-items: center;
+gap: 12px;
+padding: 15px;  
+background-color: var(--bgh);
+border-radius: 3px;
+margin-bottom: 2px;  
 }
 
-#dark {
-  background-color: darkblue;
+#header span {
+  position: absolute;
+  right: 1em;
+  
 }
+
+#time {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  color: var(--text);
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+#time p {
+  margin: 0.1em;
+  font-size: 2rem;
+}
+
+.menuButton {  
+  border-radius: .6em;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 4px black;
+  padding: 12px 24px;
+  text-align: center;  
+  font-size: 1.2em;
+  font-weight: 600;  
+  transition-duration: 120ms;
+  cursor: pointer;    
+}
+
+.menuButton:hover {
+  transform: scale(1.1);
+}
+
+
+.bio {
+    background-color: limegreen;
+}
+
+.phy {
+    background-color: purple;
+}
+
+.chem {
+    background-color: skyblue;
+}
+
+.sci {
+    background-color: orange;
+}
+
+@media (max-width: 900px) {
+  * {
+    font-size: 12px;
+  }
+
+  .maindiv {
+    margin: 0px;
+  }
+
+ #timetable {
+   overflow-x: auto;
+   min-width: 640px;
+ }
+
+ #time {
+   padding: 0px;
+   flex-direction: row;
+   justify-content: space-around;
+ }
+
+  .menuButton {
+    padding: 2px 3px;
+    font-size: .7em;
+    border-radius: .4em;
+  }
+
+  #header {
+    padding: 2px 4px;
+    gap: 1em;
+    justify-content: space-between;
+  }
+
+  #header span {
+    scale: 0.8;
+    position: relative;
+    font-size: 0.7em;
+  }
+  
+
+  td {
+    padding: 1px;
+  }
+}
+
+

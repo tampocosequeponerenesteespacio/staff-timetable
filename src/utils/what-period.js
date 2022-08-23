@@ -32,6 +32,12 @@ export const whatPeriod = (date) => {
     else if ( isLess( hour,'14:25') ) { return 9 }
     else if ( isLess( hour,'15:10') ) { return 10 }
     else if ( isLess( hour,'15:50') ) { return 11 }
-    else { return 'HOME'}
+    else { return 12}
+}
+
+//return period as it should be named 
+export const whatPeriodtoString = (date) => {
+    const periodString = ['1', '2', '3', '4', 'B', '5', '6', '7', '8', '9', '10', '11', 'Home']
+    return periodString[whatPeriod(date)]
 }
 
