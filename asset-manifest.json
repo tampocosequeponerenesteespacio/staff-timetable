@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/staff-timetable/static/css/main.4c65df33.css",
+    "main.js": "/staff-timetable/static/js/main.94bb53d5.js",
+    "index.html": "/staff-timetable/index.html",
+    "main.4c65df33.css.map": "/staff-timetable/static/css/main.4c65df33.css.map",
+    "main.94bb53d5.js.map": "/staff-timetable/static/js/main.94bb53d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c65df33.css",
+    "static/js/main.94bb53d5.js"
+  ]
+}
