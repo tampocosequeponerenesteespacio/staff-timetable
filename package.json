@@ -1,7 +1,7 @@
 {
   "name": "teacher-timetable",
   "version": "1.0.0",
-  "homepage": "http://tampocosequeponerenesteespacio.github.io/staff-timetable",
+  
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
