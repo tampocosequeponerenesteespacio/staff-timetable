@@ -13,15 +13,15 @@ const Span = styled.span`
     display: flex;
     align-items: center;
     position: relative;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0,0,0,0.7);
 }
 
 & input:checked + label {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.6);
 }
 
 & label::before {
-    content: '';
+    content: '';    
     width: 2em;
     height: 1em;
     background-color: rgba(255,255,255,0.4);
@@ -30,22 +30,22 @@ const Span = styled.span`
 }
 
 & input:checked + label::before {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgb(0,0,20)
 }
 
 & label::after {
     content: '';
-    width: .9em;
-    height: .9em;
+    width: .8em;
+    height: .8em;
     background-color: rgba(255,255,255,0.85);
     border-radius: 1em;
     position: absolute;
-    left: .05em;
+    left: .1em;
     transition: 200ms ease-in-out;
 }
 
 & input:checked + label::after {
-    left: 1.05em;
+    left: 1.1em;
     background-color: rgba(255,255,255,0.6);
 }
 
