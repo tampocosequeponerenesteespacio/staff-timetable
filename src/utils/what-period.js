@@ -17,7 +17,7 @@ const isLess = (a, b) => {
 
 
 export const whatPeriod = (date) => {
-    const hour = new Date(date).toLocaleTimeString()
+    const hour = new Date(date).toLocaleTimeString('en-GB')
     
 
     if ( isLess( hour,'8:05') ) { return 0 }

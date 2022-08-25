@@ -35,7 +35,7 @@ const App = () => {
 
       <div id='time'>
         <p>Period: {whatPeriodtoString(date)}</p>
-        <p>{date.toLocaleTimeString()}</p>
+        <p>{date.toLocaleTimeString('en-GB')}</p>
       </div>
     </div>
   )
