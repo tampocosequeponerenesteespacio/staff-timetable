@@ -9,6 +9,7 @@ const Timetable = ({teachers, day, date}) => {
     const period = whatPeriod(date)+1
 
     return (
+        <div id='tablediv' >
         <table id='timetable'>
             <thead>
                 <tr key='timetableheader'>
@@ -19,6 +20,7 @@ const Timetable = ({teachers, day, date}) => {
                 { teachers.map( (teacher) => <Teacher key={uuid()} teacher={teacher} day={day} date={date} /> )}
             </tbody>
         </table>
+        </div>
     )
 
 }
