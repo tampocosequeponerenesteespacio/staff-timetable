@@ -39,7 +39,7 @@ span label {
   margin-top: 0.4em;
 }
 
-#dayButton {
+.ttButton {
   padding: 2px 8px;
   margin: 5px;
   font-size: 1em;
@@ -51,9 +51,17 @@ span label {
   cursor: pointer;
 }
 
-#dayButton:disabled {
+.ttButton:disabled {
   cursor: default;
   opacity: 0.15;
+}
+
+#closeBtn {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  font-size: 0.8rem;
+  padding: 2px 4px;
 }
 
 #main {
@@ -114,9 +122,40 @@ td {
   margin-bottom: 0px;
 }
 
-#time p {
-  margin: 0.1em;
+.timeInfo {
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#openModalBtn {
+  font-size: 0.5em;
+  margin-left: 1em;
+  padding: 2px 6px;
+  border-radius: 1em;
+}
+
+#hours {
+  position: fixed;
+  max-width: 400px;
+  width: 100%;
+  left: 50%;
+  translate: -50%;
+  top: 12%;
+  font-size: 0.8rem;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: var(--bg);
+  z-index: 20;
+}
+
+#overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .menuButton {

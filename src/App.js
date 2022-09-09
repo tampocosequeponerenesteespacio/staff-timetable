@@ -6,11 +6,14 @@ import Header from './components/Header'
 import { whatPeriodtoString } from './utils/what-period'
 import Toggle from './components/Toggle'
 import Day from './components/Day'
+import Hours from './components/Hours'
+import Time from './components/Time'
 
 const App = () => {
   const [date, setDate] = useState(new Date())
   const [day, setDay] = useState(new Date().getDay())
   const [darkMode, setDarkMode] = useState(localStorage.getItem('toggle') === 'true')
+  const [modal, setModal] = useState(false)
 
   useEffect(() => {
     setInterval(() => {
@@ -23,6 +26,7 @@ const App = () => {
       <Header>
         <Toggle toggle={darkMode} setToggle={setDarkMode} />
       </Header>
+      <Hours modal={modal} setModal={setModal} />
 
       <Routes>
         <Route path='/' element={<Timetable teachers={SCI} day={day} date={date} />} />
@@ -33,10 +37,7 @@ const App = () => {
 
       <Day day={day} setDay={setDay} date={date} />
 
-      <div id='time'>
-        <p>Period: {whatPeriodtoString(date)}</p>
-        <p>{date.toLocaleTimeString('en-GB')}</p>
-      </div>
+      <Time date={date} moodal={modal} setModal={setModal} />
     </div>
   )
 }
