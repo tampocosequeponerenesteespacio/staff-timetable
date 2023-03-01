@@ -1,4 +1,4 @@
-import { TEACHERS } from "./teachers-data";
+import { TEACHERS } from './teachers-data'
 
 const ALL = TEACHERS.split(`"\n"`)
 

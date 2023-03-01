@@ -13,7 +13,7 @@ const Hours = ({ modal, setModal }) => {
           <tbody>
             <tr>
               <td colSpan={2}>
-                Senior School Timetable 2022
+                Senior School Timetable 2023
                 <button id='closeBtn' className='ttButton' onClick={() => setModal(false)}>
                   X
                 </button>
