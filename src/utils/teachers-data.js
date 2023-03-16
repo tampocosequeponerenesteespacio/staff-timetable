@@ -1,4 +1,4 @@
-//plain CSV,no headers, with BREAK periods included. later teacher separated by ' "\n ' and blocks separated by ' ; '
+//plain CSV,no headers, with BREAK periods included. later teacher separated by ' - ' and blocks separated by ' ; '
 
 export const TEACHERS = `" LPI
 11";"
@@ -30,7 +30,7 @@ F22";;"8C
 CHEM
 F22";"8C
 CHEM
-F22";;;"Bio
+F22";;D;"Bio
 Mtg";;"Chem
 Mtg";"
 
@@ -38,7 +38,7 @@ Mtg";"
 CHEM
 F22";"1E
 CHEM
-F22";D;"
+F22";;"
 
 ";;;"
 
@@ -52,7 +52,8 @@ F22";D;"
 
 ";;;"
 
-";;;;;D;"7F
+";;;;"L
+";D;"1E
 CHEM
 F22";"
 
@@ -72,9 +73,9 @@ F22";"L
 CHEM
 F22";"7B
 CHEM
-F22";"
-
-"
+F22";"Phy
+Mtg
+"-
 "ISA
 25";"7th
 TUT C
@@ -88,7 +89,7 @@ CHEM
 F22";;;;"L
 ";D;"1B
 CHEM
-F22";"2C
+F22/G12";"2C
 CHEM
 F22";"2C
 CHEM
@@ -145,7 +146,8 @@ CHEM
 F21";"7C
 CHEM
 F21";"At.
-Apod.";;;;"7th
+Apod.";"L
+";;;"7th
 TUT C
 A14
 ";"2C
@@ -156,13 +158,13 @@ F22";"7A
 CHEM
 F22";;"1B
 CHEM
-F21";"1B
+F21/G11";"1B
 CHEM
-F21";;D;;"1F
+F21/G11";;D;;"1F
 CHEM
 G24";"1F
 CHEM
-G24"
+G24"-
 " RAG
 28";"1st
 TUT D
@@ -263,7 +265,7 @@ F21";;"
 CHEM
 F21";"1D
 CHEM
-F21"
+F21"-
 " XMU
 26";"1st
 TUT A
@@ -278,9 +280,7 @@ G24";"8E
 CHEM
 G24";"
 
-";"
-
-";"1A
+";D;"1A
 CHEM
 G24";"1A
 CHEM
@@ -297,7 +297,7 @@ Apod.";"
 CHEM
 G24";"2E
 CHEM
-G24";;D;"1st
+G24";;;"1st
 TUT A
 G24
 ";"
@@ -367,8 +367,8 @@ SCI 2
 G24";"L
 ";;"1A
 CHEM
-F22"
-" CCA
+F22"-
+" COC
 26";"
 
 ";"4m
@@ -399,16 +399,15 @@ F11";"4m
 1BIO A
 F11";"1C
 BIO
-F11";"
-
+F11";"L
 ";"Bio
 Mtg";;;"
 
 ";"3m
 1BIO A
-B2";"3m
+F11";"3m
 1BIO A
-B2";"
+F11";"
 
 ";;"1D
 BIO
@@ -460,7 +459,7 @@ F12";"
 BIO
 F12";"2E
 BIO
-F12"
+F12"-
 " CKR
 27";"
 
@@ -535,9 +534,7 @@ F12";;"C
 F12";"4m
 2BIO A
 F12";"L
-";;"
-
-"
+";;-
 " FGR
 27";;"7D
 BIO
@@ -562,11 +559,11 @@ F11";;;;;"C
 ";;"Bio
 Mtg";"
 
-";;;;"
-
-";"
-
-";;"1E
+";;;;"8B
+BIO
+F11";"8B
+BIO
+F11";;"1E
 BIO
 F11";"1E
 BIO
@@ -601,7 +598,7 @@ F11";;D;;"8D
 BIO
 F11";"8D
 BIO
-F11"
+F11"-
 " LGR
 24";"3th
 TUT B
@@ -624,9 +621,9 @@ G21";"C
 TUT B
 G12";"8E
 BIO
-G23";"8E
+L24";"8E
 BIO
-G23";"
+L24";"
 
 ";;"7B
 BIO
@@ -645,7 +642,7 @@ G12";"4C
 SCI 1
 F12";"4C
 SCI 1
-F12";;;"7E
+F12";;D;"7E
 BIO
 G22";"7E
 BIO
@@ -671,20 +668,18 @@ G12";"
 
 ";"4F
 SCI 1
-G11";"4F
+G12";"4F
 SCI 1
-G11";;"4C
+G12";;"4C
 SCI 1
-G11";"4C
+G12";"4C
 SCI 1
-G11";"3A
+G12";"3A
 SCI 1
-G11";"3A
+G12";"3A
 SCI 1
-G11";"L
-";;"
-
-"
+G12";"L
+";;-
 " MAG
 24";;;;;D;;;;"3m
 2PHY A
@@ -700,13 +695,11 @@ H22";"3m
 2PHY A
 H22";"Phy
 Mtg
-";D;;"2A
+";;;"2A
 PHY
 H24";"2A
 PHY
-H24";"
-
-";"
+H24";D;"
 
 ";"4m
 2PHY A
@@ -760,10 +753,11 @@ H24";"L
 
 ";"
 
-"
+"-
 " MTO
 27";"8th
 TUT C
+A26
 ";"3F
 SCI 3
 H22";"3F
@@ -780,6 +774,7 @@ H22";"7E
 PHY
 H22";;"8th
 TUT C
+A26
 ";;"C
 ";"Phy
 Mtg
@@ -793,8 +788,10 @@ H22";"
 
 ";"8th
 TUT C
+A26
 ";;;"8th
 TUT C
+A26
 ";"
 
 ";"1E
@@ -816,8 +813,10 @@ H22";"8C
 PHY
 H22";"8th
 TUT C
+A26
 ";"8th
 TUT C
+A26
 ";"4E
 SCI 3
 G22";"4E
@@ -830,6 +829,7 @@ H22";"1C
 PHY
 H22";;"8th
 TUT C
+A26
 ";"2B
 PHY
 H22";"4E
@@ -850,7 +850,7 @@ H22";"1E
 PHY
 H22";"
 
-"
+"-
 " NRE
 26";"
 
@@ -870,9 +870,9 @@ H23";"
 
 ";D;"1B
 PHY
-H23";"1B
+H23/G11";"1B
 PHY
-H23";"
+H23/G11";"
 
 ";"2C
 PHY
@@ -886,7 +886,7 @@ Mtg
 PHY
 G12";"1B
 PHY
-H23";"
+H23/G12";"
 
 ";"
 
@@ -926,15 +926,15 @@ PHY
 H23";"
 
 ";"C
-";;;"4B
+";;;;"4B
 SCI 3
 H23";"4B
 SCI 3
-H23";;;;D;"1F
+H23";;;D;"1F
 CHEM
 G24";"1F
 CHEM
-G24"
+G24"-
 " POR
 25";"
 
@@ -987,8 +987,8 @@ H24";"
 PHY
 H24";"7F
 PHY
-H24";"L
-";D;"3C
+H24";D;"L
+";"3C
 SCI 3
 G22";"3C
 SCI 3

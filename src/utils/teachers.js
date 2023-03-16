@@ -1,6 +1,6 @@
 import { TEACHERS } from './teachers-data'
 
-const ALL = TEACHERS.split(`"\n"`)
+const ALL = TEACHERS.split('-')
 
 const LPI = ALL[0].split(';')
 const ISA = ALL[1].split(';')
